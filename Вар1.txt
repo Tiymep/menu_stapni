@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Блюд</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        header { background: #ff7f50; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        nav { display: none; flex-direction: column; background: #ff7f50; position: absolute; top: 60px; left: 0; width: 100%; }
+        nav a { padding: 1rem; color: white; text-decoration: none; border-top: 1px solid rgba(255, 255, 255, 0.3); }
+        nav a:hover { background: #ffa07a; }
+        .burger { cursor: pointer; }
+        .burger div { width: 25px; height: 3px; background: white; margin: 5px; }
+        .content { padding: 1rem; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+
+        @media (min-width: 600px) {
+            nav { display: flex !important; flex-direction: row; position: static; }
+            nav a { border: none; }
+            .burger { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>Меню</div>
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="menu">
+        <a href="#pelmeni">Пельмени</a>
+        <a href="#vareniki">Вареники</a>
+        <a href="#shnicel">Шницель</a>
+        <a href="#kotleti">Котлеты</a>
+        <a href="#golubcy">Голубцы</a>
+    </nav>
+</header>
+
+<div class="content">
+    <section id="pelmeni">
+        <h2>Пельмени</h2>
+        <table>
+            <tr><th>Название</th><th>Цена</th></tr>
+            <tr><td>Пельмени с говядиной</td><td>350 руб</td></tr>
+            <tr><td>Пельмени с курицей</td><td>300 руб</td></tr>
+        </table>
+    </section>
+
+    <section id="vareniki">
+        <h2>Вареники</h2>
+        <table>
+            <tr><th>Название</th><th>Цена</th></tr>
+            <tr><td>Вареники с картошкой</td><td>280 руб</td></tr>
+            <tr><td>Вареники с вишней</td><td>320 руб</td></tr>
+        </table>
+    </section>
+
+    <section id="shnicel">
+        <h2>Шницель</h2>
+        <table>
+            <tr><th>Название</th><th>Цена</th></tr>
+            <tr><td>Шницель классический</td><td>450 руб</td></tr>
+            <tr><td>Шницель по-венски</td><td>500 руб</td></tr>
+        </table>
+    </section>
+
+    <section id="kotleti">
+        <h2>Котлеты</h2>
+        <table>
+            <tr><th>Название</th><th>Цена</th></tr>
+            <tr><td>Котлеты куриные</td><td>250 руб</td></tr>
+            <tr><td>Котлеты по-домашнему</td><td>270 руб</td></tr>
+        </table>
+    </section>
+
+    <section id="golubcy">
+        <h2>Голубцы</h2>
+        <table>
+            <tr><th>Название</th><th>Цена</th></tr>
+            <tr><td>Голубцы с мясом</td><td>320 руб</td></tr>
+            <tr><td>Голубцы овощные</td><td>290 руб</td></tr>
+        </table>
+    </section>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
+
+</body>
+</html>
