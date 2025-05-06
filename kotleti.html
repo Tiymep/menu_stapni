@@ -3,44 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пельмени</title>
+    <title>Котлеты</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
-        header { background: #ff7f50; color: white; padding: 1rem; text-align: center; }
-        nav { background: #ffa07a; display: flex; justify-content: center; gap: 1rem; padding: 0.5rem; flex-wrap: wrap; }
-        nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 5px; transition: background 0.3s; }
-        nav a:hover { background: #ff6347; }
-        .content { padding: 2rem; }
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-        th { background-color: #f2f2f2; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        header {
+            background: #ff7f50; /* Тот же цвет, что на главной */
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background: #ffa07a; /* Более мягкий оттенок, подходящий к шапке */
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav a:hover {
+            background: #ff6347; /* Тот же цвет, что и при наведении на главной */
+            transform: scale(1.05);
+        }
+        .content {
+            padding: 2rem;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ff7f50; /* Тот же цвет, что и у шапки */
+            padding: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        th {
+            background-color: #ff7f50; /* Тот же цвет, что и у шапки */
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #ff6347; /* Цвет, который появляется при наведении на строки */
+            color: white;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            nav a {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    Котлеты
+    Котлеты <i class="fas fa-hamburger"></i>
 </header>
 
 <nav>
-    <a href="index.html">Главная</a>
-    <a href="pelmeni.html">Пельмени</a>
-    <a href="vareniki.html">Вареники</a>
-    <a href="shnicel.html">Шницель</a>
-    <a href="kotleti.html">Котлеты</a>
-    <a href="golubcy.html">Голубцы</a>
-    <a href="cheburek.html">Чебуреки</a>
+    <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+    <a href="pelmeni.html"><i class="fas fa-utensils"></i> Пельмени</a>
+    <a href="vareniki.html"><i class="fas fa-pizza-slice"></i> Вареники</a>
+    <a href="shnicel.html"><i class="fas fa-drumstick-bite"></i> Шницель</a>
+    <a href="kotleti.html"><i class="fas fa-hamburger"></i> Котлеты</a>
+    <a href="golubcy.html"><i class="fas fa-lemon"></i> Голубцы</a>
+    <a href="cheburek.html"><i class="fas fa-pastafarianism"></i> Чебуреки</a>
 </nav>
 
 <div class="content">
-    <h2>Наши Котлеты и тефтели</h2>
+    <h2>Наши Котлеты</h2>
     <table>
         <tr><th>Название</th></tr>
-        <tr><td>Котлеты со свининой</td></tr>
-        <tr><td>Котлеты с горбушей и скумбрией</td></tr>
-        <tr><td>Тефтели со свининой и рисом</td></tr>
-        <tr><td>Ежики мясные со свининой и рисом</td></tr>
-
+        <tr><td><i class="fas fa-hamburger"></i> Котлеты из свинины</td></tr>
     </table>
 </div>
 
